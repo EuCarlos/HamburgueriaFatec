@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Fatec</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/dusk/2x/hamburger.png">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ac3cf98fe0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      button {float: right;}
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <nav id="menunav">
+      <label for="menuicon">&#9776;</label>
+      <input type="checkbox" id="menuicon"/>
+     
+      <div id="menuitems">
+        <a href="index.html#inicio">INICIO</a>
+        <a href="index.html#sobre">SOBRE</a>
+        <a href="index.html#cardapio">CARDÁPIO</a>
+        <a href="#">CALCULADORA</a>
+      </div>
+    </nav>
+      
+    <!-- mmmm -->
+    <section class="caracteristicas">
+      <h3>MONTE SEU HAMBÚRGUER</h3>
+      <p>
+        Para montar o seu hambúrguer basta selecionar os ingredientes que desejar, 
+        se não quiser mais algum ingrediente é só clicar na lixeira ao lado. Quando 
+        finalizar aperte em "CALCULAR VALOR" e em seguida clique em "IMPRIMIR PEDIDO"
+      </p>
+      <div class="content">
+        <div class="row">
+          <div class="col-12">
+            <form align="center">
+              <input type="button" name="" value="PICANHA" onClick="picanha();" class="btn btn-danger">
+              <input type="button" name="" value="CEBOLA" onClick="cebola();" class="btn btn-danger">
+              <input type="button" name="" value="TOMATE" onClick="tomate();" class="btn btn-danger">
+              <input type="button" name="" value="CHEDDAR" onClick="cheddar();" class="btn btn-danger">
+              <input type="button" name="" value="GRÃO DE BICO" onClick="grao_bico();" class="btn btn-danger">
+              <input type="button" name="" value="BACON" onClick="bacon();" class="btn btn-danger"><br><br>
+              <input type="button" name="" value="MAIONESE" onClick="maionese();" class="btn btn-danger">
+              <input type="button" name="" value="ALFACE" onClick="alface();" class="btn btn-danger">
+              <input type="button" name="" value="CARNE DE JACA" onClick="carne_jaca();" class="btn btn-danger">
+              <input type="button" name="" value="MOLHO ESPECIAL" onClick="molho_esp();" class="btn btn-danger">
+              <input type="button" name="" value="OVO FRITO" onClick="ovo_frito();" class="btn btn-danger"><br><br>
+              <input type="button" name="" value="PEPINO" onClick="pepino();" class="btn btn-danger">
+              <input type="button" name="" value="CHAMPIGNON" onClick="champignon();" class="btn btn-danger">
+              <input type="button" name="" value="MUSSARELA" onClick="mussarela();" class="btn btn-danger">
+              <input type="button" name="" value="FRANGO" onClick="frango();" class="btn btn-danger">
+              <input type="button" name="" value="MUSSARELA VEGANA" onClick="muss_veg();" class="btn btn-danger"><br><br>
+            </form>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-12">
+            <div class="to-do-list-box  printable">
+              <div id="texto_pedido"><h3>Hamburguer Montado</h3></div>
+              <ul id="myList">
+                
+              </ul>
+              <hr>
+              <div id="preco_total" >R$ 0,00</div>
+            </div>
+          <div>
+        </div>
+        <p>
+          <br>
+          <input type="button" name="" value="CALCULAR VALOR" onClick="valor_total();" class="btn btn-danger">
+          <input type="button" name="" value="IMPRIMIR PEDIDO" onClick="print();" class="btn btn-danger">
+        </p>
+      </div>
+  </section>
+    <!-- Rodapé -->
+    <footer>
+      <table align="center">
+        <tr>
+          <td align="left"><i class="fas fa-business-time"></i> <strong>FUNCIONAMENTO</strong><br>
+          Seg à Sex: 17:00 às 23:00<br>
+          Sab e Dom: 17:00 às 03:00<br>
+          Feriados: 14:00 às 23:00</td>
+          
+          <td align="left"><i class="fas fa-receipt"></i> <strong>RETIRADA DE PEDIDOS</strong><br>
+          Basta agendar um horario <br>para a entrega ou pedir <br>pelo Ifood.</td>
+          
+          <td align="left"><strong>ENTRE EM CONTATO</strong><br>
+          <i class="fas fa-phone"></i> 11 2058-2222<br>
+          <i class="fab fa-whatsapp"></i> 11 91234-5678<br>
+          <i class="fab fa-instagram"></i> HamburgueriaFatec</td>
+      </tr>
+      </table>
+    </footer>
+      <script src="_js/script.js"></script>
+      <!-- bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

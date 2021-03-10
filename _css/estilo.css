@@ -1,0 +1,185 @@
+:root {
+    --primeira-cor: #fff;
+    --segunda-cor: #FF3C38;
+    --terceira-cor: #CC0300;
+    --quarta-cor: #2b2d42;
+    --cor-menu: #000;
+}
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+/* Menu */
+#menunav {
+    width: 100%;
+    background: var(--primeira-cor);
+    position: sticky;
+    top: 0;
+  }
+  .grid a, .grid a:link { color: var(--segunda-cor);}
+  /* esconde icone  de menu responsivo */
+  #menunav label, #menuicon { display: none;}
+  
+  /* Horizontal Menu Items */
+  #menuitems { display: flex; }
+  #menuitems a, #login_menu a {
+    width: 25%; /* 100% / 4 itens no menu  = 25% */
+    padding: 10px;
+    color: var(--cor-menu);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  #menuitems a:hover {
+    background: var(--segunda-cor);
+    color: var(--primeira-cor);
+  }
+  
+  /* Para dispositivo com no maximo 768 pixel */
+  @media screen and (max-width: 768px){
+    /* Mostra icone  de menu responsivo */
+    #menunav label { 
+      display: inline-block; 
+      color: var(--primeira-cor);
+      background: var(--terceira-cor);
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    /* Divida os itens do menu em verticais */
+    #menuitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid var(--primeira-cor);
+    }
+  
+    /* Alternar Mostrar / Ocultar Menu */
+    #menuitems { display: none; }
+    #menunav input:checked ~ #menuitems { display: block; }
+  }
+  /* NÃO MEXER */
+  html, body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+  }
+
+/* Informações */
+.caracteristicas {
+  background-color: var(--primeira-cor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+}
+.caracteristicas  h3, .cardapio_titulo {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: var(--segunda-cor);
+  text-align: center;
+  font-weight: bold;
+}
+.caracteristicas  p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  color: var(--cor-menu);
+  text-align: center;
+}
+.caracteristicas  hr {
+  width: 200px;
+  height: 2px;
+  background-color: var(--segunda-cor);
+  margin-bottom: 70px;
+  border: none;
+}
+.caracteristicas .grid {
+  width: 100%;
+  display: flex;
+  list-style:none;
+}
+.caracteristicas .grid li {
+  padding: 0 30px;
+  text-align: center;
+}
+.caracteristicas .grid li i {
+  color: var(--segunda-cor);
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.caracteristicas .grid li h4 {
+  font-size: 1.5rem;
+  color: var(--segunda-cor);
+  margin-bottom: 30px;
+}
+.caracteristicas .grid li p {
+  color: var(--cor-menu);
+}
+@media (max-width: 850px) {
+  .caracteristicas .grid {
+      flex-direction: column;
+  }
+}
+/* SOBRE */
+.sobre { color: var(--primeira-cor); background: var(--segunda-cor); padding: 3% 4%;}
+.sobre img {margin-right: 3em;}
+.sobre h3, h3{ text-align: center; font-weight: bold; }
+h3 { color: var(--segunda-cor); }
+/* CARDAPIO */
+.cardapio {width: 100%; float:left; text-align: center; padding: 3% 4%;}
+.cards {width: 100%; background-color: var(--quarta-cor); text-align: left; border-radius: 50px; margin-bottom: 3%;}
+.cards img {border-radius:50px 50px 0 0;}
+.inner {padding: 7%;}
+.inner a, .inner a:link {font-size: 1.5em; color: var(--segunda-cor); text-decoration: none;}
+.inner h4 {font-size: 1em; color: var(--primeira-cor); margin-top: 2%;}
+.inner p {margin-top: 6%; color: var(--primeira-cor); line-height: 1.5em;}
+.banner {background: var(--segunda-cor);}
+@media screen and (min-width: 768px) {
+  .cards {width: 49%; float: left; margin-right: 1%;}
+  .cards:nth-child(2) {margin-right: 0;}
+}
+
+@media screen and (min-width: 960px) {
+  .inner p {font-size: 0.7em;}
+  .cards {width: 23%;}
+  .cards:nth-child(2) {margin-right: 1%;}
+  .cards:nth-child(3) {margin-right: 1%;}
+}
+#mensagem_erro p { color: var(--segunda-cor);}
+/* Rodapé */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--quarta-cor);
+  padding: 50px 0;
+  align-items: center;
+  color: var(--primeira-cor);
+}
+footer table tr td { width: 15em;}
+/* Calculadora */
+ul { list-style-type:none; padding-left: 10px;}
+#myList li{ 
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+  height:25px; 
+  margin: 15px 0 30px 0; 
+}
+#preco_total, #texto_pedido { text-align: center; font-weight: bold; font-size: 40px ; color: var(--segunda-cor); }
+#texto_pedido h3 { visibility: hidden;}
+/* Imprimir */
+@media print {
+  body * {
+    visibility: hidden;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  .printable, .printable * {
+    visibility: visible;
+  }
+  .printable {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .printable button { visibility: hidden;}
+  #texto_pedido h3 { visibility: visible;}
+}
