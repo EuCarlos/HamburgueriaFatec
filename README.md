@@ -1,4 +1,6 @@
 # HamburgueriaFatec :hamburger:
+_For the English version of this README, click [here](/locales/en/README.md)._
+
 Projeto Interdisciplinar IV de Programação para Web na Fatec de Itaquaquecetuba. 
 
 ### Autores
